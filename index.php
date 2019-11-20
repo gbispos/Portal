@@ -29,7 +29,7 @@
             <div class="card flex-50">
                 <div class="card-body">
                     <form>
-                        <div class="form-group ">
+                        <div method="POST" action="login.php" class="form-group ">
                             <label for="exampleInputEmail1"> Email</label>
                             <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
