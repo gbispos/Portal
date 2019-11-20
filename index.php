@@ -6,7 +6,6 @@
     }
     $errouSenha = isset($_GET['errorSenha']) ? true : false;
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -28,8 +27,8 @@
         <div class="container d-flex center-ctr">
             <div class="card flex-50">
                 <div class="card-body">
-                    <form>
-                        <div method="POST" action="login.php" class="form-group ">
+                    <form  method="POST" action="login.php">
+                        <div class="form-group">
                             <label for="exampleInputEmail1"> Email</label>
                             <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
@@ -37,10 +36,10 @@
                              <label for="exampleInputPassword1">Senha</label>
                             <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Senha">
                         </div>
+                        <?php if ($errouSenha) echo "<small id='emailHelp' class='text-error'Email ou senha incorreta.</small>"; ?>
                         <div class="row alinha-botao">
                             <div class="col">
                                 <button type="submit" class="btn btn-primary text-center">Acessar</button>
-                                <button type="submit" class="btn btn-primary">Esqueceu seu email?</button>
                             </div> 
                         </div>
                     </form>
