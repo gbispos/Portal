@@ -1,0 +1,20 @@
+.txt-ctr{
+    display: inline-block;
+    font-style: italic;
+}
+
+.center-ctr{
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
+}
+
+.flex-50{
+    flex: 0 0 50%;
+} 
+
+.alinha-botao{
+    display: grid;
+    margin:0 auto;
+    justify-content: center;
+}
