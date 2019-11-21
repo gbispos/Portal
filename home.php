@@ -1,7 +1,7 @@
   
 <?php
     include_once "funcoes.php";
-$alunoInfo = getAluno($conn);
+    $alunoInfo = getAluno($conn,$login);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,25 +34,24 @@ $alunoInfo = getAluno($conn);
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Aluno:</label>
                         <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="augusto@aluno.br">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Média Final:</label>
                         <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="5,15">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="8,15">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Status:</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Aprovado">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Aprovado!">
                         </div>
                     </div>
                     </form>
                 </div>
             </div>
         </div>
-
     </body>
 </html>

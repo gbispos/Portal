@@ -8,10 +8,9 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true
     header('location:index.php');
 }
 $logado = $_SESSION['login'];
-function getAluno($conn) {    
-    $sql="SELECT NOME FROM pessoas";
+function getAluno($conn, $login) {    
+    $sql="SELECT * FROM alunos a INNER JOIN pessoas p ON p.PESSOA_ID = a.PESSOA_ID WHERE EMAIL =  '".$login."' ";
     $result=$conn->query($sql);
     return  $result;
 }
-
 ?>
