@@ -1,7 +1,8 @@
   
 <?php
     include_once "funcoes.php";
-    $alunoInfo = getAluno($conn,$login);
+    $alunoInfo = getAluno($conn);
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,26 +31,57 @@
         <div class="container d-flex center-ctr">
             <div class="card flex-50">
                 <div class="card-body">
+                <?php 
+                if($alunoInfo->num_rows > 0 )
+                {
+                    while($row = $alunoInfo->fetch_assoc()){
+                        
+                    ?>
+
                     <form method="POST" action="login.php">
-                    <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Aluno:</label>
-                        <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="augusto@aluno.br">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Aluno:</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $row["nome"]; ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Média Final:</label>
-                        <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="8,15">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">N1:</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $row["n1"]; ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Status:</label>
-                        <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Aprovado!">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">N2:</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $row["n2"]; ?>">
+                            </div>
                         </div>
-                    </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Média Final:</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $row["media"]; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Status:</label>
+                            <div class="col-sm-6">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php if($row["media"] >= 5){
+                                    echo "Aprovado";
+
+                                }else{
+                                    echo "Reprovado";
+                                } ?>">
+                            </div>
+                        </div>
                     </form>
+
+                    <?php
+
+                    }
+                }
+                
+                ?>
                 </div>
             </div>
         </div>
