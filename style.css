@@ -1,3 +1,8 @@
+body {
+    background-image: url("https://www.pucsp.br/sites/default/files/slideshow/carrossel-vestibular-verao_3_0.jpg");
+    background-color: #cccccc;
+   }
+
 .txt-ctr{
     display: inline-block;
     font-style: italic;

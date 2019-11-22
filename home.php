@@ -15,7 +15,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body style="background-image: url('https://2.bp.blogspot.com/-l5FOhjF1W3Q/WjhLvpJ4MYI/AAAAAAAAHCo/Fx_M3FHMoj8kLXrt0NIZtxJXLIZ-BfX5gCLcBGAs/s2560/gradient-blue-yellow-hd.jpg');">
         <nav class="navbar fixed-top navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img src="https://www.pucsp.br/sites/default/files/download/brasao-PUCSP-assinatura-principal-RGB.png" width="30" height="50" class="d-inline-block align-top" alt="">        
@@ -38,7 +38,7 @@
                         
                     ?>
 
-                    <form method="POST" action="login.php">
+                    <form method="POST" action="restrita.php">
                         <div class="form-group row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Aluno:</label>
                             <div class="col-sm-10">
@@ -73,6 +73,11 @@
                                     echo "Reprovado";
                                 } ?>">
                             </div>
+                        </div>
+                        <div class="row alinha-botao">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary text-center">Alterar</button>
+                            </div> 
                         </div>
                     </form>
 

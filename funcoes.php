@@ -10,7 +10,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true
 
 function getAluno($conn) {    
     $idPessoa = $_SESSION['pessoa_id'];
-    $sql="SELECT p.nome, p.nome, a.n1, a.n2, a.media FROM alunos a INNER JOIN pessoas p ON p.PESSOA_ID = a.PESSOA_ID ";
+    $sql="SELECT p.nome, a.n1, a.n2, a.media FROM alunos a INNER JOIN pessoas p ON p.PESSOA_ID = a.PESSOA_ID ";
     $sql=$sql."WHERE a.PESSOA_ID = '".$idPessoa."'";
 
     echo $sql;
