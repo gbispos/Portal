@@ -1,5 +1,5 @@
-  
 <?php
+//Aluno: Gustavo Bispo - ra00199120
     include_once "funcoes.php";
     $alunoInfo = getAluno($conn);
     

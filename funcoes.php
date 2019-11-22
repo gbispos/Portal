@@ -1,5 +1,5 @@
 <?php
-//inicia a conexão com dados informados
+//Aluno: Gustavo Bispo - ra00199120
 include "conexao.php";
 session_start();
 if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {

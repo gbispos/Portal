@@ -1,4 +1,5 @@
 <?php 
+//Aluno: Gustavo Bispo - ra00199120
     include "funcoes.php";
     $n1 = $_POST['nota1'];
     $n2 = $_POST['nota2'];

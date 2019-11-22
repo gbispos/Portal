@@ -1,4 +1,5 @@
 <?php
+//Aluno: Gustavo Bispo - ra00199120
     $Servidor="localhost";
     $Usuario="root";
     $Senha="root";
