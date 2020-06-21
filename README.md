@@ -13,4 +13,4 @@ PASSOS:
       *email: gustavo@aluno.br
       *senha: GUS20RA
 
-  - Após logar, você será direcionado a página referente ao aluno. Lá é possível ver as notas e situação do aluno e também alterar as notas
+  - Após logar, você será direcionado a página referente ao aluno. Onde é possível verificar as notas e situação do aluno, além de alterar as notas.
